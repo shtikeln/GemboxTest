@@ -13,10 +13,7 @@ namespace GemboxTest
                 ComponentInfo.SetLicense(
                     "");
                 DocumentModel document = DocumentModel.Load(stream, new DocxLoadOptions());
-                using (var outPdf = new MemoryStream())
-                {
-                    document.Save("output.pdf");
-                }
+                document.Save("output.pdf");
             }
         }
     }
